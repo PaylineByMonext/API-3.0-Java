@@ -131,6 +131,8 @@ public abstract class AbstractSaleRequest<Request, Response> {
 				throw exception;
 			case 404:
 				throw new CieloRequestException("Not found", new CieloError(404, "Not found"), null);
+			case 500:
+				throw new CieloRequestException("Internal error", new CieloError(0, "Internal error"), null);
 			default:
 				LOGGER.warn("{}: {}", "Cielo", "Unknown status: " + statusCode);
 		}
