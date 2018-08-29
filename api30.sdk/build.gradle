@@ -3,7 +3,7 @@ apply plugin: 'jacoco'
 apply plugin: 'maven-publish'
 
 group = 'br.cielo.cieloecommerce'
-version = '1.0.0'
+version = '1.0.1'
 
 apply plugin: 'maven'
 apply plugin: 'java-library'

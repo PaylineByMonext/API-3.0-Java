@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.UUID;
 import java.util.zip.GZIPInputStream;
 
+import org.apache.http.Consts;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -86,7 +87,7 @@ public abstract class AbstractSaleRequest<Request, Response> {
 			responseEntityContent = new GZIPInputStream(responseEntityContent);
 		}
 
-		final BufferedReader responseReader = new BufferedReader(new InputStreamReader(responseEntityContent, "UTF-8"));
+		final BufferedReader responseReader = new BufferedReader(new InputStreamReader(responseEntityContent, Consts.UTF_8));
 		StringBuilder responseBuilder = new StringBuilder();
 		String line;
 
